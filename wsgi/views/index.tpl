@@ -17,9 +17,11 @@
 		<script src="/static/js/skel.min.js"></script>
 		<script src="/static/js/skel-layers.min.js"></script>
 		<script src="/static/js/init.js"></script>
-		<link rel="stylesheet" href="/static/css/skel.css" type="text/css"/>
-		<link rel="stylesheet" href="/static/css/style.css" type="text/css"/>
-		<link rel="stylesheet" href="/static/css/style-xlarge.css" type="text/css"/>
+		<noscript>
+			<link rel="stylesheet" href="/static/css/skel.css" type="text/css"/>
+			<link rel="stylesheet" href="/static/css/style.css" type="text/css"/>
+			<link rel="stylesheet" href="/static/css/style-xlarge.css" type="text/css"/>
+		</noscript>
 	</head>
 	<body class="landing">
 
