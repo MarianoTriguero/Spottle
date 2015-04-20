@@ -54,7 +54,6 @@
 		<!-- One -->
 			<section id="one" class="spotlight style1 bottom">
 				<div class="content">
-					<span class="image fit main"><img src="/static/images/pic02.jpg" alt="" /></span>
 					<div class="container">
 						<div class="row">
 							<div class="4u 12u$(medium)">
