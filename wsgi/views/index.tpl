@@ -53,8 +53,8 @@
 
 		<!-- One -->
 			<section id="one" class="spotlight style1 bottom">
-				<span class="image"><img src="/static/images/pic02.jpg" alt="" /></span>
 				<div class="content">
+					<span class="image fit main"><img src="/static/images/pic02.jpg" alt="" /></span>
 					<div class="container">
 						<div class="row">
 							<div class="4u 12u$(medium)">
@@ -77,7 +77,7 @@
 
 		<!-- Two -->
 			<section id="two" class="spotlight style2 right">
-				<span class="image"><img src="/static/images/pic03.jpg" alt="" /></span>
+				<span class="image fit main"><img src="/static/images/pic03.jpg" alt="" /></span>
 				<div class="content">
 					<header>
 						<h2>¿Aún no eres usuario de Spotify?</h2>
@@ -93,7 +93,7 @@
 
 		<!-- Three -->
 			<section id="three" class="spotlight style3 left">
-				<span class="image"><img src="/static/images/pic04.jpg" alt="" /></span>
+				<span class="image fit main bottom"><img src="/static/images/pic04.jpg" alt="" /></span>
 				<div class="content">
 					<header>
 						<h2>¿Deseas conocer más a fondo tus artistas favoritos?</h2>
