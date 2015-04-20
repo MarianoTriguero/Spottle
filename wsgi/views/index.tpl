@@ -93,7 +93,7 @@
 
 		<!-- Three -->
 			<section id="three" class="spotlight style3 left">
-				<span class="image fit main bottom"><img src="/static/pic04.jpg" alt="" /></span>
+				<span class="image fit main bottom"><img src="/static/images/pic04.jpg" alt="" /></span>
 				<div class="content">
 					<header>
 						<h2>¿Deseas conocer más a fondo tus artistas favoritos?</h2>
