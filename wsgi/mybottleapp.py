@@ -12,8 +12,8 @@ def informacion():
 @get('/infowiki')
 @post('/infowiki')
 def infowiki():
-	categoria = bottle.request.params.get('category')
-	busqueda = bottle.request.params.get('busqueda')
+	categoria = request.params.get('category')
+	busqueda = request.params.get('busqueda')
 	urlapi = "http://es.wikipedia.org/w/api.php?"
 	if categoria == 1:
 		jsonfile = requests.get(apiurl + "action=query&prop=pageimages&format=json&piprop=original&titles=" + busqueda)
