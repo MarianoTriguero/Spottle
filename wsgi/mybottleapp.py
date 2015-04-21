@@ -20,7 +20,7 @@ def infowiki():
 		archivo = json.load(jsonfile)
 		for campos in archivo["query"]["pages"]:
 			urlimagen = str(campos["title"]["original"])
-	return urlimagen
+	return template('infowiki.tpl', urlimagen)
 
 
 
