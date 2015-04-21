@@ -20,8 +20,8 @@ def infowiki():
 	urlapi = "http://es.wikipedia.org/w/api.php?"
 	jsonfile = urllib2.urlopen(str(urlapi) + "action=query&prop=pageimages&format=json&piprop=original&titles=" + str(busqueda))
 	archivo = json.load(jsonfile)
-	for campos in archivo["query"]["pages"]:
-		urlimagen = str(campos["title"]["original"])
+	for campos in archivo[0][0]:
+		urlimagen = str(campos[3][0])
 	return template('infowiki.tpl', urlimagen)
 
 
