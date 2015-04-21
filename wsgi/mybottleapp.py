@@ -2,9 +2,7 @@ from bottle import route, default_app, template, static_file
 
 @route('/')
 def index():
-	return template('header.tpl')
 	return template('index.tpl')
-	return template('footer.tpl')
 
 @route('/informacion/')
 def informacion():

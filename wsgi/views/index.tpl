@@ -1,3 +1,4 @@
+% include('header.tpl')
 		<!-- Banner -->
 			<section id="banner">
 				<div class="content">
@@ -94,3 +95,4 @@
 					</form>
 				</div>
 			</section>
+% include('footer.tpl')
