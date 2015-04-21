@@ -32,8 +32,8 @@
 					<ul>
 						<li><a href="/">Inicio</a></li>
 						<li><a href="/informacion/">Informaci&oacute;n</a></li>
-						<li><a href="https://www.spotify.com/es/signup/open/" class="button special">Reg&iacute;strate en Spotify</a></li>
 						<li><a href="" class="button">Login</a></li>
+						<li><a href="https://www.spotify.com/es/signup/open/" class="button special">Reg&iacute;strate en Spotify</a></li>
 					</ul>
 				</nav>
 			</header>
