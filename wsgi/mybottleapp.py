@@ -18,7 +18,7 @@ def infowiki():
 	categoria = request.params.get('category')
 	busqueda = request.params.get('busqueda')
 	urlapi = "http://es.wikipedia.org/w/api.php?"
-	jsonfile = urllib2.urlopen(urlapi + "action=query&prop=pageimages&format=json&piprop=original&titles=" + busqueda)
+	jsonfile = urllib2.urlopen(str(urlapi) + "action=query&prop=pageimages&format=json&piprop=original&titles=" + str(busqueda))
 	archivo = json.load(jsonfile)
 	for campos in archivo["query"]["pages"]:
 		urlimagen = str(campos["title"]["original"])
