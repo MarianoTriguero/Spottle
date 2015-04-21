@@ -1,12 +1,28 @@
-from bottle import route, default_app, template, static_file
+from bottle import route, default_app, template, static_file, get, post, requests
 
 @route('/')
 def index():
 	return template('index.tpl')
 
+@route('/informacion')
 @route('/informacion/')
 def informacion():
 	return template('informacion.tpl')
+
+@get('/infowiki')
+@post('/infowiki')
+def infowiki():
+	categoria = request.params.get('category')
+	busqueda = request.params.get('busqueda')
+	urlapi = "http://es.wikipedia.org/w/api.php?"
+	if categoria == 1:
+		jsonfile = requests.get(apiurl + "action=query&prop=pageimages&format=json&piprop=original&titles=" + busqueda)
+		archivo = json.load(jsonfile)
+		for campos in archivo["query"]["pages"]:
+			urlimagen = str(campos["title"]["original"])
+	return urlimagen
+
+
 
 @route('/static/<filename>')
 def serve_filename(filename):

@@ -14,7 +14,7 @@
 						<h2>Obtenga informaci&oacute;n r&aacute;pidamente sobre sus artistas, grupos o &aacute;lbums favoritos.</h2>
 						<p>Rellene el siguiente formulario y pulse el bot&oacute;n buscar para mostrar la informaci&oacute;n que desee.</p>
 					</header>
-					<form method="post" action="#">
+					<form method="post" action="/infowiki">
 						<div class="row uniform 50%">
 							<div class="select-wrapper">
 								<select name="category" id="category">
@@ -25,7 +25,7 @@
 								</select>
 							</div>
 							<div class="6u 12u$(xsmall)">
-								<input type="text" name="name" id="name" value="" placeholder="Escriba aquí lo que quiere buscar" />
+								<input type="text" name="busqueda" id="name" value="" placeholder="Escriba aquí lo que quiere buscar" />
 							</div>
 							<div>
 								<input type="submit" value="Buscar" class="fit special" />
