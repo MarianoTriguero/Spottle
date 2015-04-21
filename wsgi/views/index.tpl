@@ -53,6 +53,7 @@
 
 		<!-- One -->
 			<section id="one" class="spotlight style1 bottom">
+				<span class="image fit main"><img src="/static/images/pic02.jpg" alt="" /></span>
 				<div class="content">
 					<div class="container">
 						<div class="row">
