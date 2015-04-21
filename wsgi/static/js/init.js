@@ -11,7 +11,7 @@
 		breakpoints: {
 			global: { href: '/static/css/style.css', containers: '70em', grid: { gutters: ['2.5em', 0] } },
 			xlarge: { media: '(max-width: 1680px)', href: '/static/css/style-xlarge.css' },
-			large: { media: '(max-width: 1280px)', href: '/static/css/style-large.css', containers: '90%', viewport: { scalable: true } },
+			large: { media: '(max-width: 1280px)', href: '/static/css/style-large.css', containers: '90%', viewport: { scalable: false } },
 			medium: { media: '(max-width: 980px)', href: '/static/css/style-medium.css', containers: '100%!' },
 			small: { media: '(max-width: 736px)', href: '/static/css/style-small.css' },
 			xsmall: { media: '(max-width: 480px)', href: '/static/css/style-xsmall.css' }
