@@ -2,36 +2,18 @@
 			<!-- Banner -->
 			<section id="banner">
 				<div class="content">
-					<span class="image"><img src="{{urlimagen}}" alt=""/></span>
+					<header>
+						<h2>{{titulo}}</h2>
+						<ul class="actions">
+							<li><a href="#one" class="button special">Mu&eacute;strame la informaci&oacuten</a></li>
+						</ul>
+					</header>
+					<span class="image"><img src={{imagen}} alt=""/></span>
 				</div>
 				<a href="#one" class="goto-next scrolly">Next</a>
 			</section>
-
-
-			<section id="one" class="wrapper special fade">
-				<div class="container">
-					<header>
-						<h2>Obtenga informaci&oacute;n r&aacute;pidamente sobre sus artistas, grupos o &aacute;lbums favoritos.</h2>
-						<p>Rellene el siguiente formulario y pulse el bot&oacute;n buscar para mostrar la informaci&oacute;n que desee.</p>
-					</header>
-					<form method="post" action="/infowiki">
-						<div class="row uniform 50%">
-							<div class="select-wrapper">
-								<select name="category" id="category">
-									<option value="">Seleccione el tipo de búsqueda</option>
-									<option value="1">Grupo</option>
-									<option value="2">Artista</option>
-									<option value="3">&Aacute;lbum</option>
-								</select>
-							</div>
-							<div class="6u 12u$(xsmall)">
-								<input type="text" name="busqueda" id="name" value="" placeholder="Escriba aquí lo que quiere buscar" />
-							</div>
-							<div>
-								<input type="submit" value="Buscar" class="fit special" />
-							</div>
-						</div>
-					</form>
-				</div>
+			<section id="one">
+				<p><span class="image left"><img src={{imagen}} alt=""></span><h2>{{titulo}}</h2>{{texto}}</p>
 			</section>
+
 % include('footer.tpl')

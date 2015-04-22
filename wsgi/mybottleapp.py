@@ -17,13 +17,21 @@ def informacion():
 def infowiki():
 	categoria = request.params.get('category')
 	busqueda = request.params.get('busqueda')
+	busqueda = busqueda.replace(" ", "%20")
 	urlapi = "http://es.wikipedia.org/w/api.php?"
-	jsonfile = urllib2.urlopen(str(urlapi) + "action=query&prop=pageimages&format=json&piprop=original&titles=" + str(busqueda))
-	archivo = json.load(jsonfile)
-	for campos in archivo[0][0]:
-		urlimagen = str(campos[3][0])
-	return template('infowiki.tpl', urlimagen)
+	jsontext = urllib.urlopen(str(urlapi) + "action=query&prop=revisions&rvprop=content&format=json&titles=" + str(busqueda))
+	jsonimage = urllib.urlopen(str(urlapi) + "action=query&prop=pageimages&format=json&piprop=original&titles=" + str(busqueda))
+	archivotext = json.load(jsontext)
+	archivoimage = json.load(jsonimage)
 
+	for campos in archivotext["query"]["pages"]:
+		texto = archivotext["query"]["pages"][str(campos)]["revisions"][0]["*"]
+		return texto
+	for campos in archivoimage["query"]["pages"]:
+		imagen = archivoimage["query"]["pages"][str(campos)]["thumbnail"]["original"]
+		titulo = archivoimage["query"]["pages"][str(campos)]["title"]
+
+	return template('infowiki.tpl', {"imagen":imagen, "titulo":titulo, "texto":texto})
 
 
 @route('/static/<filename>')
