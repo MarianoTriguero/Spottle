@@ -1,7 +1,7 @@
 from bottle import route, default_app, template, static_file, get, post, request
 
 import json
-import urllib2
+import urllib
 
 @route('/')
 def index():
@@ -26,13 +26,11 @@ def infowiki():
 
 	for campos in archivotext["query"]["pages"]:
 		texto = archivotext["query"]["pages"][str(campos)]["revisions"][0]["*"]
-		return texto
+
 	for campos in archivoimage["query"]["pages"]:
 		imagen = archivoimage["query"]["pages"][str(campos)]["thumbnail"]["original"]
 		titulo = archivoimage["query"]["pages"][str(campos)]["title"]
-
 	return template('infowiki.tpl', {"imagen":imagen, "titulo":titulo, "texto":texto})
-
 
 @route('/static/<filename>')
 def serve_filename(filename):
