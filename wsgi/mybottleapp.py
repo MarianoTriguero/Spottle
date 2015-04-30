@@ -1,7 +1,6 @@
-from bottle import route, default_app, template, static_file, get, post, request
-
-import json
-import urllib
+# -*- coding: utf-8 -*-
+from bottle import route, default_app, template, static_file, get, post, request, run
+import funciones
 
 @route('/')
 def index():
@@ -17,20 +16,11 @@ def informacion():
 def infowiki():
 	categoria = request.params.get('category')
 	busqueda = request.params.get('busqueda')
-	busqueda = busqueda.replace(" ", "%20")
-	urlapi = "http://es.wikipedia.org/w/api.php?"
-	jsontext = urllib.urlopen(str(urlapi) + "action=query&prop=revisions&rvprop=content&format=json&titles=" + str(busqueda))
-	jsonimage = urllib.urlopen(str(urlapi) + "action=query&prop=pageimages&format=json&piprop=original&titles=" + str(busqueda))
-	archivotext = json.load(jsontext)
-	archivoimage = json.load(jsonimage)
-
-	for campos in archivotext["query"]["pages"]:
-		texto = archivotext["query"]["pages"][str(campos)]["revisions"][0]["*"]
-
-	for campos in archivoimage["query"]["pages"]:
-		imagen = archivoimage["query"]["pages"][str(campos)]["thumbnail"]["original"]
-		titulo = archivoimage["query"]["pages"][str(campos)]["title"]
-	return template('infowiki.tpl', {"imagen":imagen, "titulo":titulo, "texto":texto})
+	imagen = funciones.urlimagen(busqueda)
+	titulo = funciones.obtentitulo(busqueda)
+	#Para evitar recibir una respuesta en formato Wikitext, he optado por usar markdown para convertir el formato
+	funciones.textowiki(busqueda)
+	return template("infowiki.tpl", {"imagen":imagen, "titulo":titulo})
 
 @route('/static/<filename>')
 def serve_filename(filename):
