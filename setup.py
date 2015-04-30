@@ -6,5 +6,5 @@ setup(name='Spottle',
       author='Mariano Triguero Marquez',
       author_email='mariano2455@hotmail.com',
       url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=['bottle','markdown','bs4']
+      install_requires=['bottle','markdown','beautifulsoup4']
      )
