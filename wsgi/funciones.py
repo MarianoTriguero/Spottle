@@ -41,8 +41,8 @@ def textowiki(cadena):
 	#Obtenemos la posicion final e inicial de la parte que queremos para formar el documento definitivo
 	textoporlineas = texto.splitlines()
 	for linea in textoporlineas:
-		if str(linea).startswith("[editar datos en Wikidata]"):
-			posicioninicio = textoporlineas.index(linea) + 1
+		if str(linea).lower().startswith(cadena.lower()):
+			posicioninicio = textoporlineas.index(linea)
 		elif "Componentes" == str(linea) or "Miembros" == str(linea) or "Discografía" == str(linea) or "Referencias" == str(linea) or "Cronología" == str(linea):
 			posicionfinal = textoporlineas.index(linea) - 1
 			break
