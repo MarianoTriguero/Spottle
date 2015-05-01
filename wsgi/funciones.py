@@ -59,7 +59,7 @@ def textowiki(cadena):
 	texto = re.sub('\[[0-9][0-9]\]', ' ', texto)
 	texto = re.sub('\[[0-9]\]', ' ', texto)
 	#Escribimos en el archivo
-	templ = open("views/wikitext.tpl","w")
+	templ = open("wikitext.tpl","w")
 	templ.write(texto)
 	templ.close()
 
