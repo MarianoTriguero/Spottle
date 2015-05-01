@@ -43,8 +43,9 @@ def textowiki(cadena):
 	for linea in textoporlineas:
 		if str(linea).startswith("[editar datos en Wikidata]"):
 			posicioninicio = textoporlineas.index(linea) + 1
-		elif "Componentes" == str(linea):
+		elif "Componentes" == str(linea) or "Miembros" == str(linea) or "Discografía" == str(linea) or "Referencias" == str(linea) or "Cronología" == str(linea):
 			posicionfinal = textoporlineas.index(linea) - 1
+			break
 	#Formamos el nuevo documento
 	textoelegido = textoporlineas[posicioninicio:posicionfinal]
 	texto = ""
